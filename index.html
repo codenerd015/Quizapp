@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset='utf-8'>
+   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+   <title>Keuze menu</title>
+   <meta name='viewport' content='width=device-width, initial-scale=1'>
+   <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+
+<body>
+   <div class="container-menu">
+       <div class="inhoud">
+          <h1>Maak uw selectie</h1>
+           
+          <h2 id="score"></h2> <!-- Hier wil ik de score tonen -->
+
+          <button id="keuze-btn" onclick="selectCategory(19)">Mathematics</button> <br>
+          <button id="keuze-btn" onclick="selectCategory(21)">Sport</button> <br>
+          <button id="keuze-btn" onclick="selectCategory(17)">Science</button> <br>
+          <button id="keuze-btn" onclick="selectCategory(18)">Computerscience</button> <br>
+
+       </div>
+    </div>
+    
+<script>
+
+   function selectCategory(categoryId) {
+      localStorage.setItem("selectedCategory", categoryId);
+      window.location.href = "vragen.html"; // Ga naar de quizpagina
+  }
+   
+</script>
+
+</body>
+</html>
